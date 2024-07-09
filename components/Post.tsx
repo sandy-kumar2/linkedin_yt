@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import ProfilePhoto from './shared/ProfilePhoto';
 import { useUser } from '@clerk/nextjs';
