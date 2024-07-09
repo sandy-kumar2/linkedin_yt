@@ -1,17 +1,16 @@
 import { IPostDocument } from '@/models/post.model'
 import React from 'react'
 import Comment from './Comment' 
-
-const Comments = ({post} : {post: IPostDocument}) => {
+const Comments = ({post}:{post:IPostDocument}) => {
   return (
-    <div>
+    <div> 
       {
-        post?.comments?.map((comment: any) => {
+        post?.comments?.map((comment: any)=>{
           return (
             <Comment key={comment._id} comment={comment}/>
           )
         })
-      }
+      } 
     </div>
   )
 }
