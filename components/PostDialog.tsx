@@ -31,6 +31,7 @@ export function PostDialog({ setOpen, open, src }: { setOpen: any, open: boolean
             setSelectedFile(dataUrl);
         }
     }
+
     const postActionHandler = async (formData: FormData) => {
         const inputText = formData.get('inputText') as string;
         try {
@@ -49,7 +50,7 @@ export function PostDialog({ setOpen, open, src }: { setOpen: any, open: boolean
                     <DialogTitle className="flex gap-2">
                         <ProfilePhoto src={src} />
                         <div>
-                            <h1>Patel Mern Stack</h1>
+                            <h1>Sandeep Mern Stack</h1>
                             <p className="text-xs">Post to anyone</p>
                         </div>
                     </DialogTitle>

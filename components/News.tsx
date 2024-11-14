@@ -5,6 +5,7 @@ interface NAVITEMS {
   heading: string,
   subHeading: string
 }
+
 const newsItems: NAVITEMS[] = [
   {
     heading: "E-retailer retag health drinks",
@@ -12,15 +13,15 @@ const newsItems: NAVITEMS[] = [
   },
   {
     heading: "Lets transport raises $22 million",
-    subHeading: "4h ago - 323 readers"
+    subHeading: "5h ago - 323 readers"
   },
   {
-    heading: "Casual waer is in at India Inc",
-    subHeading: "4h ago - 234 readers"
+    heading: "Casual wear is in India Inc",
+    subHeading: "9h ago - 234 readers"
   },
   {
-    heading: "Snaller cities go on loans",
-    subHeading: "4h ago - 112 readers"
+    heading: "Smaller cities go on loans",
+    subHeading: "1h ago - 112 readers"
   },
 ]
 

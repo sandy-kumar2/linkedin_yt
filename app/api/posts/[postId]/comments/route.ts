@@ -13,6 +13,7 @@ export const GET = async (req:NextRequest, {params}:{params:{postId:string}}) =>
             path:'comments',
             options:{sort:{createdAt:-1}},
         });
+        
         return NextResponse.json(comments);
     } catch (error) {
         return NextResponse.json({error:'an error occurred.'});

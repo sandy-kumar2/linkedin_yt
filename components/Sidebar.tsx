@@ -5,6 +5,7 @@ import ProfilePhoto from './shared/ProfilePhoto'
 
 const Sidebar = async ({ user }: { user: any }) => {
   const posts = await getAllPosts();
+
   return (
   <div className='hidden md:block w-[20%] h-fit border bordergray-300 bg-white rounded-lg'>
     <div className='flex relative flex-col items-center'>
@@ -25,7 +26,7 @@ const Sidebar = async ({ user }: { user: any }) => {
       </div>
       <div className='border-b border-b-gray-300'>
         <div className='p-2 mt-5 text-center'>
-          <h1 className='font-bold hover:underline cursor-pointer'>{user ? `${user?.firstName} ${user?.lastName}` : "Patel Mern Stack"}</h1>
+          <h1 className='font-bold hover:underline cursor-pointer'>{user ? `${user?.firstName} ${user?.lastName}` : "Sandeep Mern Stack"}</h1>
           <p className='text-xs'>@{user ? `${user?.username}` : 'username'}</p>
         </div>
       </div>

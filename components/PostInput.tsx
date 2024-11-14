@@ -6,9 +6,11 @@ import { PostDialog } from './PostDialog'
 
 const PostInput = ({ user }: { user: any }) => {
     const [open , setOpen] = useState<boolean>(false);
+    
     const inputHandler = () => {
         setOpen(true);
     }
+
     return (
         <div className='bg-white p-4 m-2 md:m-0 border border-gray-300 rounded-lg'>
             <div className='flex items-center gap-3'>

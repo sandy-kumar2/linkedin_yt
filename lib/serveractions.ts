@@ -22,7 +22,7 @@ export const createPostAction = async (inputText: string, selectedFile: string) 
     const image = selectedFile;
 
     const userDatabase: IUser = {
-        firstName: user.firstName || "Patel",
+        firstName: user.firstName || "Sandeep",
         lastName: user.lastName || "Mern Stack",
         userId: user.id,
         profilePhoto: user.imageUrl
@@ -69,6 +69,7 @@ export const deletePostAction = async (postId: string) => {
     if (post.user.userId !== user.id) {
         throw new Error('You are not an owner of this Post.');
     }
+
     try {
         await Post.deleteOne({ _id: postId });
         revalidatePath("/");
@@ -87,12 +88,14 @@ export const createCommentAction = async (postId: string, formData: FormData) =>
         if (!postId) throw new Error("Post id required");
 
         const userDatabase: IUser = {
-            firstName: user.firstName || "Patel",
+            firstName: user.firstName || "Sandeep",
             lastName: user.lastName || "Mern Stack",
             userId: user.id,
             profilePhoto: user.imageUrl
         };
+
         const post = await Post.findById(postId);
+
         if (!post) throw new Error('Post not found');
 
         const comment: ICommentDocument = await Comment.create({
@@ -100,7 +103,7 @@ export const createCommentAction = async (postId: string, formData: FormData) =>
             user: userDatabase,
         });
 
-        post.comments?.push(comment._id as unknown as ICommentDocument); // Correctly cast to match IComment type
+        post.comments?.push(comment._id as unknown as ICommentDocument);
         await post.save();
 
         revalidatePath("/");

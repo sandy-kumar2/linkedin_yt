@@ -37,6 +37,7 @@ const SocialOptions = ({ post }: { post: IPostDocument }) => {
     }
 
     const fetchAllLikes = await fetch(`/api/posts/${post._id}/like`);
+
     if (!fetchAllLikes.ok) {
       setLikes(tempLikes);
       throw new Error('Failed to fetch like');
@@ -45,6 +46,7 @@ const SocialOptions = ({ post }: { post: IPostDocument }) => {
     const likeData = await fetchAllLikes.json();
     setLikes(likeData);
   }
+  
     return (
       <div>
         <div className='text-sm mx-2 p-2 flex items-center justify-between border-b border-gray-300'>
